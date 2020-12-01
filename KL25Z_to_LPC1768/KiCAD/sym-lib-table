@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name kl_to_lpc-rescue)(type Legacy)(uri ${KIPRJMOD}/kl_to_lpc-rescue.lib)(options "")(descr ""))
+)

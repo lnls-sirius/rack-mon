@@ -1,0 +1,17 @@
+[Unit]
+Description=Rack Monitoring System
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+WorkingDirectory=/root/rack-mon/
+ExecStart=/usr/bin/python-sirius /root/rack-mon/Software/MasterSW/MasterBBB.py
+StandardOutput=syslog
+StandardError=syslog
+
+
+[Install]
+WantedBy=multi-user.target

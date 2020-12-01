@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name opa2277-)(type Legacy)(uri /home/vitorsantos/Documents/KiCad/lm35racks/opa2277-.lib)(options "")(descr ""))
+  (lib (name lm35racks-rescue)(type Legacy)(uri ${KIPRJMOD}/lm35racks-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,121 @@
+EESchema Schematic File Version 4
+LIBS:conector-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:6P6C J1
+U 1 1 5D262763
+P 6950 3000
+F 0 "J1" V 6959 3430 50  0000 L CNN
+F 1 "6P6C" V 7050 3430 50  0000 L CNN
+F 2 "Controle:RJ25" V 6950 3025 50  0001 C CNN
+F 3 "~" V 6950 3025 50  0001 C CNN
+	1    6950 3000
+	0    1    1    0   
+$EndComp
+Text Label 7150 3400 3    50   ~ 0
+CLK
+Text Label 6950 3400 3    50   ~ 0
+MOSI
+Text Label 7250 3400 3    50   ~ 0
+CS
+Text Label 7050 3400 3    50   ~ 0
+MISO
+$Comp
+L power:Earth #PWR0101
+U 1 1 5D262A0F
+P 6850 3400
+F 0 "#PWR0101" H 6850 3150 50  0001 C CNN
+F 1 "Earth" H 6850 3250 50  0001 C CNN
+F 2 "" H 6850 3400 50  0001 C CNN
+F 3 "~" H 6850 3400 50  0001 C CNN
+	1    6850 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5D262A3E
+P 6750 3400
+F 0 "#PWR0102" H 6750 3250 50  0001 C CNN
+F 1 "+5V" H 6765 3573 50  0000 C CNN
+F 2 "" H 6750 3400 50  0001 C CNN
+F 3 "" H 6750 3400 50  0001 C CNN
+	1    6750 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J2
+U 1 1 5D262B5D
+P 5900 3100
+F 0 "J2" H 5950 3717 50  0000 C CNN
+F 1 "Conn_02x10_Odd_Even" H 5950 3626 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 5900 3100 50  0001 C CNN
+F 3 "~" H 5900 3100 50  0001 C CNN
+	1    5900 3100
+	-1   0    0    -1  
+$EndComp
+Text Label 5600 3500 2    50   ~ 0
+CLK
+Text Label 5600 3200 2    50   ~ 0
+MOSI
+Text Label 6100 3400 0    50   ~ 0
+CS
+$Comp
+L power:+5V #PWR0104
+U 1 1 5D262C08
+P 6100 2900
+F 0 "#PWR0104" H 6100 2750 50  0001 C CNN
+F 1 "+5V" V 6115 3028 50  0000 L CNN
+F 2 "" H 6100 2900 50  0001 C CNN
+F 3 "" H 6100 2900 50  0001 C CNN
+	1    6100 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 5D262C1D
+P 5600 2900
+F 0 "#PWR0105" H 5600 2750 50  0001 C CNN
+F 1 "+5V" V 5615 3028 50  0000 L CNN
+F 2 "" H 5600 2900 50  0001 C CNN
+F 3 "" H 5600 2900 50  0001 C CNN
+	1    5600 2900
+	0    -1   -1   0   
+$EndComp
+Text Label 6100 3200 0    50   ~ 0
+MISO
+$Comp
+L power:Earth #PWR0106
+U 1 1 5D77D31A
+P 5600 2800
+F 0 "#PWR0106" H 5600 2550 50  0001 C CNN
+F 1 "Earth" H 5600 2650 50  0001 C CNN
+F 2 "" H 5600 2800 50  0001 C CNN
+F 3 "~" H 5600 2800 50  0001 C CNN
+	1    5600 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0107
+U 1 1 5D77D331
+P 6100 2800
+F 0 "#PWR0107" H 6100 2550 50  0001 C CNN
+F 1 "Earth" H 6100 2650 50  0001 C CNN
+F 2 "" H 6100 2800 50  0001 C CNN
+F 3 "~" H 6100 2800 50  0001 C CNN
+	1    6100 2800
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
