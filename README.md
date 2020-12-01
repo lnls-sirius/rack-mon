@@ -6,7 +6,6 @@
 - [Software](https://github.com/lnls-sirius/rack-mon#software)
 - [Installation](https://github.com/lnls-sirius/rack-mon#installation)
 - [Versions](https://github.com/lnls-sirius/rack-mon#versions)
-https://github.com/lnls-sirius/pydm-opi#desktop
 
 
 
@@ -14,11 +13,11 @@ https://github.com/lnls-sirius/pydm-opi#desktop
 
    This project is a hardware and software solution for Sirius cabinets monitoring based in a NXP's development platform, FRDM-KL25z, and SPIxxCON bus present  on Controls Group SERIALxxCON hardware. The designed baseboard for NXP development  platform  contains  the  necessary  peripherals  to  acquire  information  such  as temperature, humidity, fan status, door status and supply voltage in order to predict possible system failures and evaluate its correlation with the acquired data.
 
-   It also contains an adapter that [enables this project to work with mbed LPC1768](https://gitlab.cnpem.br/vitor.santos/racks/tree/master/KL25Z_to_LPC1768) in instead of KL25z.
+   It also contains an adapter that [enables this project to work with mbed LPC1768](https://github.com/lnls-sirius/rack-mon/tree/master/KL25Z_to_LPC1768) in instead of KL25z.
 
 ## Software
 
-### [KL25z](https://gitlab.cnpem.br/vitor.santos/racks/tree/master/Software/SlaveSW)
+### [KL25z](https://github.com/lnls-sirius/rack-mon/blob/master/Software/SlaveSW/SlaveKL25Z.c)
 
    A C program written through Mbed's platform divided in 3 modes:
 
@@ -34,14 +33,14 @@ https://github.com/lnls-sirius/pydm-opi#desktop
 
    Another interruption associated with Slave Select signal, but this happens in the falling border of the signal. This is where the board replies the requested value through SPI.
 
-### [LPC1768](https://gitlab.cnpem.br/vitor.santos/racks/blob/master/KL25Z_to_LPC1768/Software/main.cpp)
+### [LPC1768](https://github.com/lnls-sirius/rack-mon/blob/master/KL25Z_to_LPC1768/Software/SlaveLPC1768.cpp)
 
    When using LPC1768 in instead of KL25Z a few things change. The principle is still the same: reading from the SPI, copying to a answer buffer and responding through SPI but here the program doesn't work with interruptions, everything happens inside the main loop.
 
    The microcontroller reads the SPI and if there is any request enters a switch-case conditional. If the command corresponds to any of the known commands, LPC1768 responds accordingly.
 
 
-### [BeagleBone Black](https://gitlab.cnpem.br/vitor.santos/racks/tree/master/Software/MasterSW)
+### [BeagleBone Black](https://github.com/lnls-sirius/rack-mon/blob/master/Software/MasterSW/MasterBBB.py)
 
    A Python script responsible for the communication between BeagleBone Black and KL25z (or LPC1768) through SPI and for providing the data to multiple workstations through TCP/IP sockets.
 
@@ -149,12 +148,16 @@ _vX.YZ_
 
 Available KL25z software versions:
 
-- [v0.58](https://gitlab.cnpem.br/vitor.santos/racks/blob/master/Software/SlaveSW/SlaveKL25Z.c)
+- [v0.60](https://github.com/lnls-sirius/rack-mon/blob/master/Software/SlaveSW/SlaveKL25Z.c)
+- ~~v0.58~~
 - ~~v0.55~~
 - ~~v0.5~~
 - ~~v0.4~~
 
-Previous versions can be found on [MBED](https://os.mbed.com/users/vitorsp/code/rack-monitoring-system/).
+Available LPC1768 software versions:
+
+- [v1.60](https://github.com/lnls-sirius/rack-mon/blob/master/KL25Z_to_LPC1768/Software/SlaveLPC1768.cpp)
+
+Previous versions can be found on these repositories: [KL25Z](https://os.mbed.com/users/vitorsp/code/rack-monitoring-system/) and [LPC1768](https://os.mbed.com/users/vitorsp/code/rack-monitoring-system-LPC1768/).
 
 
-![Global Flow Chart](https://gitlab.cnpem.br/vitor.santos/racks/blob/master/Global%20Flow%20Chart.jpg "Global Flow Chart")
