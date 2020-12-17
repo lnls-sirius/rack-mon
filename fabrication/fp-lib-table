@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name teste)(type KiCad)(uri /home/vitor/Pictures/teste.pretty)(options "")(descr ""))
+)
